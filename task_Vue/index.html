@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+
+
+            <img src="../assets/Logo Amazing Events.png" alt="logo">
+            <nav>
+                <a class="active" href="#">Home</a>
+                <a href="./pages/upcoming.html">UpcomingEvents</a>
+                <a href="./pages/past.html">PastEvents</a>
+                <a href="./pages/contact.html">Contact</a>
+                <a href="./pages/stats.html">Stats</a>
+
+            </nav>
+        </header>
+        <div class="container__1">
+            <i></i>
+            <h1>Home</h1>
+            <a href="./pages/upcoming.html"><i>></i></a>
+        </div>
+        <div id="app">
+            <div class="container__2">
+
+                <div id="category__container">
+                    {{filtrado}}
+                    <div v-for="categorie in categories">
+                        <label :for="categorie">{{categorie}}</label>
+                        <input v-model="filterCheckbox" type="checkbox" name="categorie" :id="categorie"
+                            :value="categorie">
+                    </div>
+
+                </div>
+
+                <div>
+                    <form id="formsearch">
+                        <input v-model="searchText" class="form-control" type="search" id="search" placeholder="Search"
+                            aria-label="Search" />
+                    </form>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+            <section v-if="eventos.length>0" class="section__section">
+                <div v-for="evento of eventos"><!-- v-for="evento of eventos.events" -->
+                    <img v-bind:src="evento.image" class="section__image">
+                    <h2>{{evento.name}}</h2>
+                    <p>{{evento.description}}</p>
+                    <p>Price:{{evento.price}}</p>
+
+                </div>
+            </section>
+            <main id="main__container"></main>
+            <!--  <p>{{eventos.events}}</p> -->
+            </main>
+
+            <footer>
+                <div>
+                    <a href=""><img src="../assets/insta.png" alt="instagram"></a>
+                    <a href=""><img src="../assets/facebook.png" alt="facebook"></a>
+                    <a href=""><img src="../assets/yuotube.png" alt="youtube"></a>
+
+                </div>
+                <div>
+                    <p>Oscar G Rubiano A - Cohort 41</p>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
