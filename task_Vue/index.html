@@ -55,21 +55,21 @@
 
 
 
-
-
+            
+            <div class="position__vue">
             <section v-if="eventos.length>0" class="section__section">
                 <div v-for="evento of eventos"><!-- v-for="evento of eventos.events" -->
                     <img v-bind:src="evento.image" class="section__image">
                     <h2>{{evento.name}}</h2>
                     <p>{{evento.description}}</p>
-                    <p>Price:{{evento.price}}</p>
-
+                    <p>Price:${{evento.price}}</p>
+                    <a class="button__section" href="">See more...</a>
                 </div>
             </section>
-            <main id="main__container"></main>
+            
             <!--  <p>{{eventos.events}}</p> -->
-            </main>
-
+            
+        </div>
             <footer>
                 <div>
                     <a href=""><img src="../assets/insta.png" alt="instagram"></a>
