@@ -82,7 +82,9 @@ main{
     justify-content: center;
     padding: 4rem 1rem 4rem 1rem;
     gap:3rem;
-    min-height:80vh;
+    width: 100vh;
+    
+    
 }
 .main__contact{
     display: flex;
@@ -104,7 +106,14 @@ section>div>img{
     box-shadow: 3px 3px  rgba(0, 0, 0, 0.798);
     
 }
-section{
+.button__section{
+    background-color: darkred;
+    color: white;
+    text-decoration: none;
+    padding: .4rem;
+    border-radius: 25%;
+}
+/* section{
     height: 21.1rem;
     width: 17rem;
     padding: 1rem ;
@@ -114,15 +123,21 @@ section{
     text-align: center;
     align-items: center;
     background-color:rgba(95, 158, 160, 0.289);
+    background-color: black;
     
     
     
-}
+} */
 section div{
     display: flex;
+    flex-direction: column;
     justify-content:space-evenly;
-    align-items:flex-end;
-    gap: 1rem;
+    align-items:center;
+    
+    background-color: rgba(255, 255, 255, 0.518);
+    padding: .5rem;
+
+
     
     
 }
@@ -137,6 +152,50 @@ section h5{
 }
 caption{
     font-size: 2rem;
+}
+/* div.position__vue{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-height: 300rem;
+   width: 10rem;
+} */
+.position__vue section{
+    display: flex;
+    min-height: 100vh;
+    
+}
+section.section__section{
+    display: flex;
+   width: 100%;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+} 
+section.section__section>div{
+    width: 17rem;
+    height: 21.1rem;
+     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; 
+}
+div #app{
+    display: flex;
+    flex-direction: column;
+}
+div>#app>.position__vue{
+    display: flex;
+    flex-direction: column;
+      
+     flex-wrap: wrap;
+     gap: 2rem;
+
+     
+    
+
 }
 .main__detail{
 
